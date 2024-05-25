@@ -7,7 +7,7 @@ import globalErrorHandler from "./utils/globalErrorHandler.js";
 
 
 const app = express()
-app.set('trust proxy', 1)
+app.set('trust proxy', 2)
 app.get('/ip', (request, response) => response.send(request.ip))
 
 
