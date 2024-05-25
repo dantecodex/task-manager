@@ -1,4 +1,4 @@
-const globalErrorHandler = (error, res, res, next) => {
+const globalErrorHandler = (error, req, res, next) => {
     error.status = error.status || "Server Error"
     error.statusCode = error.statusCode || 500
 
@@ -7,3 +7,5 @@ const globalErrorHandler = (error, res, res, next) => {
         message: error.message
     })
 }
+
+export default globalErrorHandler
