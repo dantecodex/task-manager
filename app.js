@@ -7,6 +7,10 @@ import globalErrorHandler from "./utils/globalErrorHandler.js";
 
 
 const app = express()
+app.set('trust proxy', 1)
+app.get('/ip', (request, response) => response.send(request.ip))
+
+
 // app.use(helmet()) // Content Security problem from inline script
 
 app.use(
